@@ -73,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS Changes README
 %{perl_vendorarch}/Fuse.pm
 %dir %{perl_vendorarch}/auto/Fuse/
-%{perl_vendorarch}/auto/Fuse/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Fuse/*.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
