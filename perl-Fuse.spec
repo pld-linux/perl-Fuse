@@ -1,26 +1,22 @@
 #
 # Conditional build:
 %bcond_with	tests		# do perform "make test"; disabled fusermount restricted
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define	pdir	Fuse
+%include	/usr/lib/rpm/macros.perl
 Summary:	Fuse - write filesystems in Perl using FUSE
-#Summary(pl.UTF-8):	
 Name:		perl-Fuse
 Version:	0.09_3
 Release:	1
 # same as perl (REMOVE THIS LINE IF NOT TRUE)
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/D/DP/DPAVLIN/Fuse-0.09_3.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/D/DP/DPAVLIN/Fuse-%{version}.tar.gz
 # Source0-md5:	f14c2e1c58eeefabcb87753289963a3b
-# generic URL, check or change before uncommenting
-#URL:		http://search.cpan.org/dist/Fuse/
+URL:		http://search.cpan.org/dist/Fuse/
 BuildRequires:	libfuse-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,19 +26,14 @@ This lets you implement filesystems in perl, through the FUSE
 FUSE expects you to implement callbacks for the various functions.
 
 In the following definitions, "errno" can be 0 (for a success),
--EINVAL, -ENOENT, -EONFIRE, any integer less than 1 really.
+- -EINVAL, -ENOENT, -EONFIRE, any integer less than 1 really.
 
-You can import standard error constants by saying something like
-"use POSIX qw(EDOTDOT ENOANO);".
+You can import standard error constants by saying something like "use
+POSIX qw(EDOTDOT ENOANO);".
 
-Every constant you need (file types, open() flags, error values,
-etc) can be imported either from POSIX or from Fcntl, often both.
-See their respective documentations, for more information.
-
-
-
-# %description -l pl.UTF-8
-# TODO
+Every constant you need (file types, open() flags, error values, etc)
+can be imported either from POSIX or from Fcntl, often both. See their
+respective documentations, for more information.
 
 %prep
 %setup -q -n %{pdir}-%{version}
