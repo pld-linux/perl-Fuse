@@ -6,13 +6,13 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Fuse - write filesystems in Perl using FUSE
 Name:		perl-Fuse
-Version:	0.09_3
+Version:	0.16
 Release:	1
 # same as perl (REMOVE THIS LINE IF NOT TRUE)
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/D/DP/DPAVLIN/Fuse-%{version}.tar.gz
-# Source0-md5:	f14c2e1c58eeefabcb87753289963a3b
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+# Source0-md5:	d7f36eb55392270d2c6b2f05737b553f
 URL:		http://search.cpan.org/dist/Fuse/
 BuildRequires:	libfuse-devel
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -65,5 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Fuse.pm
 %dir %{perl_vendorarch}/auto/Fuse/
 %attr(755,root,root) %{perl_vendorarch}/auto/Fuse/*.so
+%{perl_vendorarch}/auto/Fuse/autosplit.ix
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
