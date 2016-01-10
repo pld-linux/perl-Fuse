@@ -11,7 +11,7 @@ Release:	1
 # same as perl (REMOVE THIS LINE IF NOT TRUE)
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/DPATES/%{pdir}-%{version}.tar.gz
 # Source0-md5:	29534329808d8cf42fc78ca26c6fa698
 URL:		http://search.cpan.org/dist/Fuse/
 BuildRequires:	libfuse-devel
