@@ -2,17 +2,17 @@
 # Conditional build:
 %bcond_with	tests		# do perform "make test"; disabled fusermount restricted
 
-%define	pdir	Fuse
+%define		pdir	Fuse
 %include	/usr/lib/rpm/macros.perl
 Summary:	Fuse - write filesystems in Perl using FUSE
 Name:		perl-Fuse
-Version:	0.16
+Version:	0.16.1
 Release:	1
 # same as perl (REMOVE THIS LINE IF NOT TRUE)
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
-# Source0-md5:	d7f36eb55392270d2c6b2f05737b553f
+# Source0-md5:	29534329808d8cf42fc78ca26c6fa698
 URL:		http://search.cpan.org/dist/Fuse/
 BuildRequires:	libfuse-devel
 BuildRequires:	perl-devel >= 1:5.8.0
