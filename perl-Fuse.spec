@@ -3,7 +3,6 @@
 %bcond_with	tests		# do perform "make test"; disabled fusermount restricted
 
 %define		pdir	Fuse
-%include	/usr/lib/rpm/macros.perl
 Summary:	Fuse - write filesystems in Perl using FUSE
 Name:		perl-Fuse
 Version:	0.16.1
